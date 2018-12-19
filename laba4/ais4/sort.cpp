@@ -112,10 +112,10 @@ void bogo_sort(int *array, size_t len) {// Глупая сортировка
 
 
 void count_sort(char* array, size_t len) { //Сортировка подсчетом
-	char * count_array = new char[127];
+	char * count_array = new char[256];
 	size_t index;
 
-	for (index = 0; index < 127; index++)
+	for (index = 0; index < 256; index++)
 		count_array[index] = 0;
 
 	for (index = 0; index < len; index++)
@@ -124,7 +124,7 @@ void count_sort(char* array, size_t len) { //Сортировка подсчет
 	index = 0;
 	size_t count_index = 0;
 
-	while (count_index != 127) {
+	while (count_index != 256) {
 		if (count_array[count_index] != 0) {
 			count_array[count_index]--;
 			array[index++] = 'a' + count_index;
